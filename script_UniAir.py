@@ -30,7 +30,7 @@ class UniAir(Scripts_default):
                         #   "LASTNAME_FIRSTNAME_GENDER(先生/女士/男童/女童)_ID_BIRTHDATE(YYYY-mm-dd)"
                         #   in the order of 一般-全額 > 一般-敬老 > 一般-兒童 > 一般-軍人 > 一般-愛心 > 一般-愛心陪同 
                         #                   > 居民 > 居民-敬老 > 居民-愛心
-                        "PASSENGER-LIST" : ["鍾_多多_先生_O100332841_1978-06-24",
+                        "PASSENGER-LIST" : ["鍾_多多_先生_O123456789_1978-06-24",
                                             "林_小多_女士_B223456789_1935-06-24",
                                             "鍾_大多_女士_C223456789_1995-06-24",
                                             "林_多_女士_D223456789_1996-06-24",],
@@ -64,7 +64,7 @@ class UniAir(Scripts_default):
                         "RE-DISABLE-COMP": "居民-愛心陪同, ex:0",
                         # PASSENGER LIST #
                         "PASSENGER-LIST" : "in the order of 一般-全額 > 一般-敬老 > 一般-兒童 > 一般-軍人 > 一般-愛心 > 一般-愛心陪同 > 居民 > 居民-敬老 > 居民-愛心 \n"+\
-                                    "such as:['鍾_多多_先生_O100332841_1978-06-24', '林_小多_女士_B223456789_1935-06-24', '鍾_大多_女士_C223456789_1995-06-24', '林_多_女士_D223456789_1996-06-24']",                        
+                                    "such as:['鍾_多多_先生_O123456789_1978-06-24', '林_小多_女士_B223456789_1935-06-24', '鍾_大多_女士_C223456789_1995-06-24', '林_多_女士_D223456789_1996-06-24']",                        
                         "CONTACT-INFO" : "['ex:0912345678', 'ex:stanxxxx@gmail.com']",
                         # PAYMENT INFO #
                         "CARD-TYPE"     : "ex:American Express(VISA/MasterCard/American Express/JCB)",
