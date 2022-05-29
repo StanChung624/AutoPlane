@@ -1,0 +1,4 @@
+*.exe
+__pycache__
+TraceReporter.txt
+REQUIRED_INFO.txt
