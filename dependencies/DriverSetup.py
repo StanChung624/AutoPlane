@@ -23,6 +23,7 @@ class DriverSetup(Chrome):
     """
     def __init__(self):
         options = Options()
+        # silence the driver output
         options.add_argument("--log-level=3")
         self = super().__init__(options=options)
 
@@ -38,11 +39,25 @@ class DriverSetup(Chrome):
 
 
     def send_ScrollDown(self, times:int=1):
+        """
+        Send SCROLL-DOWN to page.
+        
+        :args::
+
+        -times(int) : send multiple times.
+        """
         for i in range(times):
             body = self.find_element_by_css_selector('body')
             body.send_keys(Keys.PAGE_DOWN)
 
-    def send_End(self):
+    def send_End(self, times:int=1):
+        """
+        Send END to page.
+        
+        :args::
+
+        -times(int) : send multiple times.
+        """
         body = self.find_element_by_css_selector('body')
         body.send_keys(Keys.END)
 

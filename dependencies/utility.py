@@ -31,6 +31,9 @@ def refine_date(DATE):
     return [YYYY,mm,dd]
 
 def process_flight_info(web_flight_info, DEPARTURE):
+    """
+    Getting page information and return the webelement index for click()
+    """
     departure_time_list = []
     web_flight_info = list(filter(('無可售機位').__ne__, web_flight_info))
     for i in range(0,len(web_flight_info)):
@@ -40,6 +43,9 @@ def process_flight_info(web_flight_info, DEPARTURE):
     return  index
 
 def process_passenger_list(INFO):
+    """
+    Process INFO to list
+    """
     raw_passenger_list = INFO["PASSENGER-LIST"]
     passenger_list = []
     fare_type = ["FULLPRICE", "ELDER", "CHILDREN", "MILITARY", "DISABLE", "DISABLE-COMP", "RESIDENT", "RE-ELDER", "RE-DISABLE", "RE-DISABLE-COMP"]
@@ -59,8 +65,14 @@ def process_passenger_list(INFO):
     return passenger_list
 
 def is_birthday_correct(value:str, INFO, index):
+    """
+    Check if text equals to INFO
+    """
     return value == INFO["PASSENGER-LIST"][index].replace('-','/').split('_')[-1]
 
+# ----------------------------------------------------------------------------------- #
+# Simple TraceReporter class
+# ----------------------------------------------------------------------------------- #
 from datetime import datetime
 class TraceReporter:
     def __init__(self, debug_flag:bool=False):
